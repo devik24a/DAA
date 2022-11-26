@@ -1,0 +1,31 @@
+#include<stdio.h>
+void printMaxEvents(int s[ ], int f[ ], int n)
+{
+int i, j;
+printf ("Following events are selected n ");
+i = 0;
+printf("%d ", i);P
+for (j = 1; j < n; j++)
+{
+if (s[ j ] >= f[ i ])
+{
+printf ("%d ", j);
+i = j;
+}
+}
+}
+10
+int main()
+{
+ int n,i;
+ printf("Total number of events :");
+ scanf( "%d", &n);
+ int s[ n ] ,f[ n ];
+ printf("s[ ] --> An array that contains start time of all events\n");
+ printf(" events should already sorted according to their finish time\n 
+ ");
+for (i = 0; i < n; i++){
+ scanf("%d", &f[ i ]);
+ }
+ printMaxEvents(s, f, n);
+ return 0; }
